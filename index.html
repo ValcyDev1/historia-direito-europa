@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>História do Direito na Europa | Cronologia Interativa & Marcos Históricos</title>
+  
+  <!-- Fontes Tipográficas: Cinzel (Elegância Clássica/Jurídica) e Inter (Leitura Moderna) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Ícones Phosphor / SVG inline -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-primary: #0a0f1d;
+      --bg-secondary: #10182b;
+      --bg-tertiary: #17233e;
+      --bg-card: rgba(16, 24, 43, 0.85);
+      --bg-card-hover: rgba(23, 35, 62, 0.95);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --accent-gold: #d4af37;
+      --accent-gold-light: #f3e5ab;
+      --accent-gold-dark: #aa841f;
+      --accent-bronze: #c5a059;
+      
+      --civil-law-color: #3b82f6;
+      --common-law-color: #ec4899;
+      --filosofia-color: #8b5cf6;
+      --internacional-color: #10b981;
+      
+      --border-color: rgba(212, 175, 55, 0.22);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 25px rgba(212, 175, 55, 0.25);
+      
+      --font-display: 'Cinzel', serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f8fafc;
+      --bg-secondary: #f1f5f9;
+      --bg-tertiary: #e2e8f0;
+      --bg-card: rgba(255, 255, 255, 0.92);
+      --bg-card-hover: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #94a3b8;
+      --border-color: rgba(170, 132, 31, 0.35);
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      overflow-x: hidden;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    /* Background texture overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                  radial-gradient(circle at 85% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 45%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header & Navigation */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 15, 29, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    [data-theme="light"] header.site-header {
+      background: rgba(248, 250, 252, 0.9);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a0f1d;
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .brand-title span.sub {
+      font-size: 0.72rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--accent-gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-gold);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle, .btn-action {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 9px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .theme-toggle:hover, .btn-action:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 70px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--border-color);
+      color: var(--accent-gold);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.18;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-gold-light) 75%, var(--accent-gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    [data-theme="light"] .hero-title {
+      background: linear-gradient(135deg, #0f172a 40%, var(--accent-gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 820px;
+      margin: 0 auto 36px;
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .stat-pill {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+    }
+
+    .stat-pill:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-3px);
+    }
+
+    .stat-pill i {
+      font-size: 1.5rem;
+      color: var(--accent-gold);
+    }
+
+    .stat-pill .num {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      display: block;
+      color: var(--text-main);
+      line-height: 1;
+    }
+
+    .stat-pill .lbl {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* Control Panel: Search & Filters */
+    .controls-section {
+      position: sticky;
+      top: 76px;
+      z-index: 900;
+      background: rgba(10, 15, 29, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 18px 0;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    [data-theme="light"] .controls-section {
+      background: rgba(248, 250, 252, 0.94);
+    }
+
+    .controls-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+    }
+
+    .search-box i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      font-size: 1.05rem;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 13px 18px 13px 44px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+      transition: var(--transition);
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+      background: var(--bg-tertiary);
+    }
+
+    .view-mode-toggle {
+      display: flex;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .view-btn {
+      padding: 8px 14px;
+      border-radius: 7px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.88rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .view-btn.active {
+      background: var(--accent-gold);
+      color: #0a0f1d;
+      font-weight: 600;
+    }
+
+    .filter-chips-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    .chip {
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.83rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    .chip:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    .chip.active {
+      background: rgba(212, 175, 55, 0.16);
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .filter-count-badge {
+      margin-left: auto;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* Featured Monuments Section */
+    .monuments-section {
+      padding: 30px 0 60px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .monuments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .monument-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow-soft);
+      transition: var(--transition);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .monument-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-glow);
+      border-color: var(--accent-gold);
+    }
+
+    .monument-thumb {
+      height: 190px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .monument-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .monument-card:hover .monument-thumb img {
+      transform: scale(1.08);
+    }
+
+    .monument-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(16, 24, 43, 0.95) 10%, transparent 60%);
+    }
+
+    .monument-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(10, 15, 29, 0.85);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+    }
+
+    .monument-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .monument-year {
+      font-family: var(--font-display);
+      color: var(--accent-gold);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .monument-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .monument-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .btn-explore {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ========================================================
+       TIMELINE & CARDS VIEW
+       ======================================================== */
+    .timeline-section {
+      padding: 40px 0 80px;
+    }
+
+    /* Alternating Timeline Layout */
+    .timeline-container {
+      position: relative;
+      margin: 40px 0;
+    }
+
+    .timeline-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: linear-gradient(to bottom, 
+        transparent, 
+        var(--accent-gold) 10%, 
+        var(--accent-gold) 90%, 
+        transparent
+      );
+      transform: translateX(-50%);
+      opacity: 0.5;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      width: 50%;
+      padding: 0 40px;
+    }
+
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+      text-align: left;
+    }
+
+    /* Timeline center node */
+    .timeline-node {
+      position: absolute;
+      top: 26px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--bg-primary);
+      border: 3px solid var(--accent-gold);
+      z-index: 2;
+      box-shadow: 0 0 14px var(--accent-gold);
+      transition: var(--transition);
+    }
+
+    .timeline-item.left .timeline-node {
+      right: -11px;
+    }
+
+    .timeline-item.right .timeline-node {
+      left: -11px;
+    }
+
+    .timeline-item:hover .timeline-node {
+      transform: scale(1.3);
+      background: var(--accent-gold);
+    }
+
+    /* Event Card */
+    .event-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: var(--transition);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .event-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: var(--shadow-glow);
+      transform: translateY(-4px);
+    }
+
+    .event-card:hover::before {
+      opacity: 1;
+    }
+
+    .event-card.is-monument {
+      border: 1px solid var(--border-color);
+      background: linear-gradient(145deg, rgba(23, 35, 62, 0.88), rgba(16, 24, 43, 0.94));
+    }
+
+    .card-header-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .timeline-item.left .card-header-meta {
+      justify-content: flex-end;
+    }
+
+    .timeline-item.right .card-header-meta {
+      justify-content: flex-start;
+    }
+
+    .year-tag {
+      font-family: var(--font-display);
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: inline-block;
+    }
+
+    .badge-tradition {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .badge-tradition.civil-law {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+    }
+
+    .badge-tradition.common-law {
+      background: rgba(236, 72, 153, 0.15);
+      color: #f472b6;
+      border: 1px solid rgba(236, 72, 153, 0.35);
+    }
+
+    .badge-tradition.filosofia {
+      background: rgba(139, 92, 246, 0.15);
+      color: #a78bfa;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+    }
+
+    .badge-tradition.internacional {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .card-banner {
+      width: 100%;
+      height: 160px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .card-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .event-card:hover .card-banner img {
+      transform: scale(1.05);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.35;
+      color: var(--text-main);
+    }
+
+    .card-location {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .timeline-item.left .card-location {
+      justify-content: flex-end;
+    }
+
+    .card-snippet {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .card-action-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+    }
+
+    .timeline-item.left .card-action-bar {
+      justify-content: flex-end;
+    }
+
+    /* Grid Layout Alternative */
+    .grid-view-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+      margin: 30px 0;
+    }
+
+    .grid-view-container .event-card {
+      text-align: left !important;
+    }
+
+    .grid-view-container .card-header-meta,
+    .grid-view-container .card-location,
+    .grid-view-container .card-action-bar {
+      justify-content: flex-start !important;
+    }
+
+    /* Responsive adjustments for Timeline */
+    @media (max-width: 900px) {
+      .timeline-container::before {
+        left: 28px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 65px;
+        padding-right: 0;
+        text-align: left !important;
+      }
+      .timeline-item.right {
+        left: 0;
+      }
+      .timeline-item.left .timeline-node,
+      .timeline-item.right .timeline-node {
+        left: 17px;
+        right: auto;
+      }
+      .timeline-item.left .card-header-meta,
+      .timeline-item.left .card-location,
+      .timeline-item.left .card-action-bar {
+        justify-content: flex-start;
+      }
+    }
+
+    /* ========================================================
+       COMPARATIVE SECTION: CIVIL LAW VS COMMON LAW
+       ======================================================== */
+    .comparative-section {
+      padding: 70px 0;
+      background: rgba(16, 24, 43, 0.5);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    [data-theme="light"] .comparative-section {
+      background: #f1f5f9;
+    }
+
+    .comp-table-wrapper {
+      overflow-x: auto;
+      margin-top: 36px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-color);
+    }
+
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      background: var(--bg-card);
+    }
+
+    .comp-table th, .comp-table td {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .comp-table th {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
+      background: rgba(10, 15, 29, 0.95);
+    }
+
+    .comp-table th.col-civil {
+      color: #60a5fa;
+      border-top: 3px solid #3b82f6;
+    }
+
+    .comp-table th.col-common {
+      color: #f472b6;
+      border-top: 3px solid #ec4899;
+    }
+
+    .comp-table td.dim-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--accent-gold);
+      font-size: 0.95rem;
+      width: 22%;
+      background: rgba(10, 15, 29, 0.4);
+    }
+
+    .comp-table td.cell-civil {
+      width: 39%;
+      color: var(--text-main);
+      font-size: 0.92rem;
+      border-left: 1px solid var(--border-subtle);
+    }
+
+    .comp-table td.cell-common {
+      width: 39%;
+      color: var(--text-main);
+      font-size: 0.92rem;
+      border-left: 1px solid var(--border-subtle);
+    }
+
+    .comp-table tr:hover td {
+      background: rgba(212, 175, 55, 0.04);
+    }
+
+    /* ========================================================
+       MODAL DE DETALHES DO EVENTO
+       ======================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 8, 16, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-window {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 780px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      position: relative;
+      transform: translateY(20px) scale(0.96);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-backdrop.active .modal-window {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-header-hero {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px 20px 0 0;
+      background: #000;
+    }
+
+    .modal-header-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-header-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--bg-secondary) 10%, rgba(10, 15, 29, 0.4) 100%);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(10, 15, 29, 0.8);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--accent-gold);
+      color: #0a0f1d;
+      transform: rotate(90deg);
+    }
+
+    .modal-body {
+      padding: 30px 36px 40px;
+    }
+
+    .modal-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .modal-year {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--accent-gold);
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .modal-place {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .modal-quote {
+      background: rgba(212, 175, 55, 0.08);
+      border-left: 4px solid var(--accent-gold);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--accent-gold-light);
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    [data-theme="light"] .modal-quote {
+      color: #78350f;
+      background: rgba(212, 175, 55, 0.12);
+    }
+
+    .modal-section-h {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--accent-gold);
+      margin: 22px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-text {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+
+    .modal-pillars-list {
+      list-style: none;
+      margin: 14px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .modal-pillars-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .modal-pillars-list li i {
+      color: var(--accent-gold);
+      margin-top: 4px;
+    }
+
+    .modal-nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      margin-top: 30px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .modal-nav-btn {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .modal-nav-btn:hover:not(:disabled) {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    .modal-nav-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    /* ========================================================
+       TUTORIAL GITHUB GESTION & PUBLICAÇÃO
+       ======================================================== */
+    .github-guide-section {
+      padding: 70px 0;
+      background: rgba(16, 24, 43, 0.6);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .guide-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: var(--shadow-soft);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .step-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+      color: #0a0f1d;
+      font-weight: 800;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .code-block {
+      background: #060913;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.88rem;
+      color: #38bdf8;
+      margin: 10px 0;
+      overflow-x: auto;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #060913;
+      border-top: 1px solid var(--border-subtle);
+      padding: 50px 0 30px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+
+    .footer-quote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--accent-gold-light);
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+    }
+
+    /* Back to top */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: var(--transition);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .back-to-top:hover {
+      background: var(--accent-gold);
+      color: #0a0f1d;
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <div class="brand-title">
+          Direito Europeu
+          <span class="sub">Cronologia & Tradições</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#monumentos"><i class="fa-solid fa-landmark"></i> Monumentos</a></li>
+        <li><a href="#cronologia"><i class="fa-solid fa-timeline"></i> Cronologia</a></li>
+        <li><a href="#comparativo"><i class="fa-solid fa-code-compare"></i> Civil Law vs. Common Law</a></li>
+        <li><a href="#github-guide"><i class="fa-brands fa-github"></i> Publicar no GitHub</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggleBtn" title="Alternar tema claro/escuro">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+          <span id="themeLabel">Escuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <i class="fa-solid fa-scroll"></i> História do Direito na Europa
+      </div>
+      <h1 class="hero-title">A Construção da Razão Jurídica Ocidental</h1>
+      <p class="hero-subtitle">
+        Uma imersão interativa nos mais de dois milênios de história jurídica europeia. Da filosofia da justiça grega e da técnica do Direito Romano à formação da Civil Law, da Common Law e aos desafios do Direito Contemporâneo.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <i class="fa-solid fa-landmark-dome"></i>
+          <div>
+            <span class="num">38</span>
+            <span class="lbl">Marcos Históricos</span>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <i class="fa-solid fa-hourglass-half"></i>
+          <div>
+            <span class="num">6</span>
+            <span class="lbl">Grandes Eras</span>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <i class="fa-solid fa-book-bookmark"></i>
+          <div>
+            <span class="num">2</span>
+            <span class="lbl">Macro-Tradições</span>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <i class="fa-solid fa-gavel"></i>
+          <div>
+            <span class="num">4</span>
+            <span class="lbl">Monumentos Maiores</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Especial: Os 4 Monumentos Maiores -->
+  <section class="monuments-section" id="monumentos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pilares Fundamentais</span>
+        <h2 class="section-title">Os Grandes Monumentos da História Jurídica</h2>
+      </div>
+
+      <div class="monuments-grid">
+        <!-- Monumento 1: Corpus Iuris Civilis -->
+        <div class="monument-card" onclick="openEventModal('corpus-iuris-civilis')">
+          <div class="monument-thumb">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Meister_von_San_Vitale_in_Ravenna.jpg/800px-Meister_von_San_Vitale_in_Ravenna.jpg" alt="Justiniano I" loading="lazy">
+            <div class="monument-overlay"></div>
+            <span class="monument-badge">529–534 d.C.</span>
+          </div>
+          <div class="monument-body">
+            <div class="monument-year">Império Bizantino</div>
+            <h3 class="monument-title">Corpus Iuris Civilis</h3>
+            <p class="monument-desc">A maior codificação da Antiguidade (Codex, Digesto, Institutas e Novelas). Preservou o saber romano e tornou-se a matriz perpétua da Civil Law.</p>
+            <div class="btn-explore">
+              <span>Explorar Monumento</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monumento 2: Magna Carta -->
+        <div class="monument-card" onclick="openEventModal('magna-carta')">
+          <div class="monument-thumb">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Magna_Charta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg/800px-Magna_Charta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg" alt="Magna Carta" loading="lazy">
+            <div class="monument-overlay"></div>
+            <span class="monument-badge">1215</span>
+          </div>
+          <div class="monument-body">
+            <div class="monument-year">Inglaterra</div>
+            <h3 class="monument-title">Magna Carta Libertatum</h3>
+            <p class="monument-desc">A pedra fundamental do Devido Processo Legal (Cláusula 39) e da legalidade tributária (Cláusula 12), freiando o arbítrio régio pela lei da terra.</p>
+            <div class="btn-explore">
+              <span>Explorar Monumento</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monumento 3: Código Napoleônico -->
+        <div class="monument-card" onclick="openEventModal('codigo-napoleonico')">
+          <div class="monument-thumb">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/800px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg" alt="Napoleão" loading="lazy">
+            <div class="monument-overlay"></div>
+            <span class="monument-badge">1804</span>
+          </div>
+          <div class="monument-body">
+            <div class="monument-year">França</div>
+            <h3 class="monument-title">Código Civil Francês</h3>
+            <p class="monument-desc">O paradigma moderno da codificação burguesa: igualdade perante a lei, propriedade privada e autonomia da vontade contratual em 2.281 artigos.</p>
+            <div class="btn-explore">
+              <span>Explorar Monumento</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monumento 4: Nuremberg -->
+        <div class="monument-card" onclick="openEventModal('nuremberg')">
+          <div class="monument-thumb">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Nuremberg_trials_courtroom.jpg/800px-Nuremberg_trials_courtroom.jpg" alt="Julgamento de Nuremberg" loading="lazy">
+            <div class="monument-overlay"></div>
+            <span class="monument-badge">1945–1946</span>
+          </div>
+          <div class="monument-body">
+            <div class="monument-year">Alemanha / Internacional</div>
+            <h3 class="monument-title">Tribunal de Nuremberg</h3>
+            <p class="monument-desc">O nascimento do Direito Penal Internacional e superação do legalismo cego com a Fórmula de Radbruch: a justiça triunfa sobre a lei desumana.</p>
+            <div class="btn-explore">
+              <span>Explorar Monumento</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Controles de Filtro e Busca -->
+  <section class="controls-section" id="cronologia">
+    <div class="container controls-grid">
+      <div class="search-row">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Pesquisar por marco, jurista (ex: Justiniano, Savigny, Beccaria), conceito ou palavra-chave...">
+        </div>
+
+        <div class="view-mode-toggle">
+          <button class="view-btn active" id="viewTimelineBtn" title="Visualização em Linha do Tempo">
+            <i class="fa-solid fa-timeline"></i> Timeline
+          </button>
+          <button class="view-btn" id="viewGridBtn" title="Visualização em Grade de Cartões">
+            <i class="fa-solid fa-border-all"></i> Grade
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-chips-row">
+        <span class="filter-label">Eras:</span>
+        <div class="chip active" data-filter-era="all">Todas as Eras</div>
+        <div class="chip" data-filter-era="antiguidade">Antiguidade Clássica</div>
+        <div class="chip" data-filter-era="media">Idade Média</div>
+        <div class="chip" data-filter-era="moderna">Idade Moderna</div>
+        <div class="chip" data-filter-era="revolucoes">Revoluções & Codificações</div>
+        <div class="chip" data-filter-era="contemporaneo">Séculos XX e XXI</div>
+
+        <span class="filter-label" style="margin-left: 12px;">Tradição:</span>
+        <div class="chip active" data-filter-tradition="all">Todas</div>
+        <div class="chip" data-filter-tradition="civil-law">Civil Law</div>
+        <div class="chip" data-filter-tradition="common-law">Common Law</div>
+        <div class="chip" data-filter-tradition="filosofia">Filosofia / Constitucional</div>
+        <div class="chip" data-filter-tradition="internacional">Internacional / Canônico</div>
+
+        <div class="chip" id="filterCrucialBtn" data-filter-crucial="false" style="margin-left: auto;">
+          <i class="fa-solid fa-star"></i> Apenas Destaques
+        </div>
+
+        <span class="filter-count-badge" id="eventCounter">Mostrando 38 de 38 eventos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline & Cards -->
+  <section class="timeline-section">
+    <div class="container">
+      <div id="eventsContainer" class="timeline-container">
+        <!-- Renderizado dinamicamente via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Quadro Comparativo: Civil Law vs. Common Law -->
+  <section class="comparative-section" id="comparativo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Análise Dogmática & Institucional</span>
+        <h2 class="section-title">Quadro Comparativo: Civil Law vs. Common Law</h2>
+        <p style="color: var(--text-muted); max-width: 750px; margin: 12px auto 0;">
+          As duas grandes tradições jurídicas moldadas no solo europeu que definem a estrutura dos sistemas de justiça em todo o mundo moderno.
+        </p>
+      </div>
+
+      <div class="comp-table-wrapper">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Dimensão de Análise</th>
+              <th class="col-civil"><i class="fa-solid fa-scale-balanced"></i> Tradição Civil Law (Europa Continental)</th>
+              <th class="col-common"><i class="fa-solid fa-gavel"></i> Tradição Common Law (Inglaterra e Gales)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="dim-name">Origem e Matriz Histórica</td>
+              <td class="cell-civil">Direito Romano justinianeu redescoberto em Bolonha (séc. XI), fundido com o Direito Canônico e costumes germânicos (Ius Commune).</td>
+              <td class="cell-common">Conquista Normanda de 1066 e a unificação da jurisprudência sob as cortes reais centralizadas (Curia Regis) em Westminster.</td>
+            </tr>
+            <tr>
+              <td class="dim-name">Fonte Primária do Direito</td>
+              <td class="cell-civil">A <strong>lei escrita e códigos sistemáticos</strong> emanados pelo Poder Legislativo soberano.</td>
+              <td class="cell-common">Os <strong>precedentes judiciais vinculantes</strong> (Case Law / Stare Decisis) e costumes imemoriais do reino.</td>
+            </tr>
+            <tr>
+              <td class="dim-name">Papel do Magistrado</td>
+              <td class="cell-civil">Aplicador e intérprete da lei geral e abstrata. Historicamente concebido como a 'boca da lei' (bouche de la loi).</td>
+              <td class="cell-common">Revelador e criador vivo do direito ('judge-made law'), cujas decisões constroem a própria regra aplicável a casos futuros.</td>
+            </tr>
+            <tr>
+              <td class="dim-name">Método de Raciocínio</td>
+              <td class="cell-civil"><strong>Dedutivo:</strong> parte da norma legislada geral e abstrata para o enquadramento do caso concreto (subsunção).</td>
+              <td class="cell-common"><strong>Indutivo:</strong> extrai a regra geral (ratio decidendi) comparando os fatos de casos judiciais pretéritos análogos.</td>
+            </tr>
+            <tr>
+              <td class="dim-name">Estrutura Textual</td>
+              <td class="cell-civil">Códigos sistemáticos e harmônicos, divididos formalmente em Livros, Títulos, Capítulos e Artigos articulados.</td>
+              <td class="cell-common">Coleções de acórdãos e relatórios judiciais (Law Reports), combinados com legislação pontual complementar (Statute Law).</td>
+            </tr>
+            <tr>
+              <td class="dim-name">Influência e Formação</td>
+              <td class="cell-civil">Nasceu nas <strong>cátedras universitárias</strong> medievais, sendo fruto de elaborações doutrinárias e teóricas de juristas acadêmicos.</td>
+              <td class="cell-common">Nasceu da <strong>prática forense corporativa</strong> das corporações de advogados e juízes em Londres (Inns of Court).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutorial GitHub Pages -->
+  <section class="github-guide-section" id="github-guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hospedagem Gratuita & Pública</span>
+        <h2 class="section-title">Como Publicar este Site no GitHub Pages (Passo a Passo)</h2>
+        <p style="color: var(--text-muted); max-width: 750px; margin: 12px auto 0;">
+          Você pode colocar este site no ar gratuitamente em menos de 3 minutos usando o <strong>GitHub Pages</strong>. Siga os passos abaixo:
+        </p>
+      </div>
+
+      <div class="guide-card">
+        <div class="guide-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 class="step-title">Crie uma Conta e um Novo Repositório no GitHub</h3>
+            <p style="color: var(--text-muted); font-size: 0.93rem;">
+              Acesse <a href="https://github.com" target="_blank" style="color: var(--accent-gold); text-decoration: underline;">github.com</a>, faça login e clique no botão verde <strong>"New"</strong> (Novo repositório). Dê um nome ao projeto, como <code>historia-direito-europa</code>, certifique-se de marcar como <strong>Public</strong> (Público) e clique em <strong>"Create repository"</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 class="step-title">Faça o Upload do Arquivo <code>index.html</code></h3>
+            <p style="color: var(--text-muted); font-size: 0.93rem;">
+              Na página inicial do seu repositório recém-criado, clique na opção <strong>"uploading an existing file"</strong> (ou arraste o arquivo). Arraste o arquivo <code>index.html</code> gerado (que contém todo o CSS, JavaScript e dados incorporados). Ao final da página, clique no botão verde <strong>"Commit changes"</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 class="step-title">Ative o GitHub Pages nas Configurações</h3>
+            <p style="color: var(--text-muted); font-size: 0.93rem;">
+              No menu superior do repositório, clique na aba <strong>Settings</strong> (Configurações) &rarr; no menu lateral esquerdo, clique em <strong>Pages</strong>. Em <strong>"Build and deployment"</strong>, sob <strong>Branch</strong>, selecione <code>main</code> (ou <code>master</code>) e a pasta <code>/ (root)</code>. Em seguida, clique em <strong>Save</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="guide-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3 class="step-title">Pronto! Acesse seu Site no Ar</h3>
+            <p style="color: var(--text-muted); font-size: 0.93rem;">
+              Aguarde de 30 a 60 segundos. Atualize a página do GitHub Pages e você verá uma barra verde indicando o link público do seu site:
+            </p>
+            <div class="code-block">https://seu-usuario.github.io/historia-direito-europa/</div>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 6px;">
+              Qualquer pessoa no mundo poderá acessar, interagir com a linha do tempo, filtrar eventos e abrir os modais explicativos!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Interativo de Detalhes -->
+  <div class="modal-backdrop" id="eventModal">
+    <div class="modal-window">
+      <div class="modal-header-hero">
+        <img id="modalImg" src="" alt="Ilustração Histórica" loading="lazy">
+        <div class="modal-header-overlay"></div>
+        <button class="modal-close-btn" id="modalCloseBtn" title="Fechar (Esc)">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-meta-row">
+          <span class="modal-year" id="modalYear"></span>
+          <span class="badge-tradition" id="modalTraditionBadge"></span>
+          <span class="chip" id="modalEraBadge" style="pointer-events: none; padding: 2px 8px; font-size: 0.75rem;"></span>
+        </div>
+
+        <h2 class="modal-title" id="modalTitle"></h2>
+        
+        <div class="modal-place">
+          <i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i>
+          <span id="modalLocation"></span>
+        </div>
+
+        <div class="modal-quote" id="modalQuoteContainer">
+          <p id="modalQuote"></p>
+        </div>
+
+        <div class="modal-section-h">
+          <i class="fa-solid fa-book-open"></i> Contexto Histórico & Significado
+        </div>
+        <p class="modal-text" id="modalDetails"></p>
+
+        <div class="modal-section-h">
+          <i class="fa-solid fa-monument"></i> Pilares Jurídicos Fundamentais
+        </div>
+        <ul class="modal-pillars-list" id="modalPillars">
+          <!-- Inserido dinamicamente -->
+        </ul>
+
+        <div class="modal-section-h">
+          <i class="fa-solid fa-clock-rotate-left"></i> Legado para o Direito Moderno
+        </div>
+        <p class="modal-text" id="modalImpact"></p>
+
+        <div class="modal-nav-bar">
+          <button class="modal-nav-btn" id="modalPrevBtn">
+            <i class="fa-solid fa-arrow-left"></i> Anterior
+          </button>
+          <span style="font-size: 0.85rem; color: var(--text-dim);" id="modalIndexIndicator">1 de 38</span>
+          <button class="modal-nav-btn" id="modalNextBtn">
+            Próximo <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão Voltar ao Topo -->
+  <button class="back-to-top" id="backToTopBtn" title="Voltar ao início">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-quote">
+        «Iuris praecepta sunt haec: honeste vivere, alterum non laedere, suum cuique tribuere.»<br>
+        <span style="font-size: 0.88rem; color: var(--text-dim);">(Viver honestamente, não lesar a outrem e dar a cada um o que é seu — Institutas de Justiniano)</span>
+      </p>
+      <p style="margin-top: 12px;">
+        Compilado Histórico e Dogmático da História do Direito na Europa &bull; Desenvolvido para Estudo e Pesquisa Interativa.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Base de Dados dos Eventos e Script de Interatividade -->
+  <script>
+    const eventsData = [{"id": "dracon", "ano": "621 a.C.", "ordem": -621, "titulo": "Reformas e Código de Drácon", "era": "Antiguidade Clássica", "era_slug": "antiguidade", "tradicao": "Grécia Antiga / Filosofia", "tradicao_tipo": "filosofia", "local": "Atenas, Grécia", "destaque": false, "imagem": "https://images.unsplash.com/photo-1555993539-1732916b8235?auto=format&fit=crop&w=800&q=80", "resumo": "Primeiro registro escrito das leis criminais atenienses, substituindo a vingança privada de sangue pela punição sob jurisdição pública da pólis.", "citacao": "«Leyes escritas con sangre, no con tinta» (Provérbio histórico sobre a severidade draconiana)", "detalhes": "Antes de Drácon, as disputas em Atenas eram resolvidas pelo arbítrio da aristocracia e pela vingança desmedida entre famílias e clãs (vendetta). A compilação draconiana fixou penas severas — muitas vezes capitais até para pequenos furtos —, mas consagrou um avanço civilizatório monumental: o monopólio estatal da punição e a distinção embrionária entre homicídio voluntário e involuntário.", "impacto": "Fundou a transição da vingança tribal privada para o sistema judiciário público e a soberania da cidade-Estado na repressão penal.", "pilares": ["Fixação da norma por escrito", "Substituição da autotutela familiar pela ação da pólis", "Distinção entre homicídio doloso e culposo"]}, {"id": "solon", "ano": "594 a.C.", "ordem": -594, "titulo": "Legislação e Reformas de Sólon", "era": "Antiguidade Clássica", "era_slug": "antiguidade", "tradicao": "Grécia Antiga / Cidadania", "tradicao_tipo": "filosofia", "local": "Atenas, Grécia", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Solon_-_Bust_in_the_National_Museum_of_Rome.jpg/640px-Solon_-_Bust_in_the_National_Museum_of_Rome.jpg", "resumo": "Abolição da escravidão por dívidas (seisachteia), reforma agrária, criação do tribunal popular (Helieia) e reorganização das classes censitárias.", "citacao": "«Eu dei ao povo o poder necessário, sem retirar nem acrescentar nada à sua honra.» — Sólon", "detalhes": "Sólon atuou como legislador e pacificador social (diallaktês). Sua medida mais celebrada foi a seisachteia ('o desvencilhar dos fardos'), proibindo empréstimos com garantia do próprio corpo do devedor e libertando os atenienses escravizados por dívida. Criou a Helieia, tribunal popular aberto a cidadãos comuns, permitindo que decisões magistrais fossem apeladas perante jurados.", "impacto": "Gênese do conceito ocidental de cidadania vinculada ao estatuto jurídico e garantia contra a mercantilização do ser humano por inadimplemento.", "pilares": ["Abolição da escravidão por dívidas (seisachteia)", "Criação do Tribunal Popular da Helieia", "Acesso dos cidadãos a instâncias judiciais de recurso"]}, {"id": "clistenes", "ano": "508 a.C.", "ordem": -508, "titulo": "Democracia de Clístenes e o Princípio da Isonomia", "era": "Antiguidade Clássica", "era_slug": "antiguidade", "tradicao": "Grécia Antiga / Democracia", "tradicao_tipo": "filosofia", "local": "Atenas, Grécia", "destaque": false, "imagem": "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80", "resumo": "Instituição da igualdade formal de todos os cidadãos perante a lei (isonomia) e igualdade de manifestação nas assembleias (isegoria).", "citacao": "«Isonomia: a mais bela de todas as palavras políticas.» — Heródoto", "detalhes": "Clístenes reestruturou o corpo cívico ateniense em dez novas tribos geográficas mistas, quebrando a hegemonia das linhagens nobres tradicionais. Fixou o princípio da isonomia (igualdade de tratamento perante a norma escrita) e da isegoria (o direito de qualquer cidadão tomar a palavra na Ekklesia). Instituiu também o ostracismo para afastar potenciais tiranos sem necessidade de julgamento penal sangrento.", "impacto": "Base filosófico-política do constitucionalismo moderno: a premissa de que a autoridade do governo emana da lei igualitária entre cidadãos.", "pilares": ["Isonomia (igualdade perante a lei)", "Isegoria (igualdade de palavra cívica)", "Desmantelamento de privilégios familiares aristocráticos"]}, {"id": "aristoteles-platao", "ano": "séc. IV a.C.", "ordem": -350, "titulo": "Filosofia da Justiça: Platão e Aristóteles", "era": "Antiguidade Clássica", "era_slug": "antiguidade", "tradicao": "Filosofia do Direito", "tradicao_tipo": "filosofia", "local": "Grécia Antiga", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/800px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg", "resumo": "Sistematização da Justiça Distributiva, Comutativa/Corretiva e do conceito de Equidade (epieikeia) para mitigar o rigor da lei geral.", "citacao": "«O equitativo é justo, e superior a certa espécie de justiça; não à justiça absoluta, mas ao erro proveniente do caráter absoluto da regra.» — Aristóteles, Ética a Nicômaco", "detalhes": "Aristóteles formulou a teoria da justiça que ainda rege a hermenêutica jurídica moderna. Distinguiu entre Justiça Distributiva (critério proporcional geométrico: distribuir honras e bens conforme o mérito) e Justiça Comutativa/Sinalagmática (critério aritmético: restabelecer a igualdade em trocas contratuais ou reparações de danos). Introduziu ainda a Equidade (epieikeia), a 'régua de Lesbos', capaz de flexibilizar a letra fria da lei para realizar a justiça no caso singular.", "impacto": "Estrutura basilar de toda a dogmática de contratos, responsabilidade civil e teoria da justiça material contemporânea.", "pilares": ["Justiça Distributiva (proporcional ao mérito)", "Justiça Comutativa (reparação do equilíbrio)", "Equidade como correção prudencial da generalidade da lei"]}, {"id": "xii-tabuas", "ano": "c. 450 a.C.", "ordem": -450, "titulo": "Lei das Doze Tábuas (Lex Duodecim Tabularum)", "era": "Antiguidade Clássica", "era_slug": "antiguidade", "tradicao": "Direito Romano / Civil Law", "tradicao_tipo": "civil-law", "local": "Roma Antiga", "destaque": true, "imagem": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80", "resumo": "Primeira grande codificação escrita romana gravada em bronze no Fórum. Vitória dos plebeus contra o arbítrio secreto dos pontífices e patrícios.", "citacao": "«Salus populi suprema lex esto» — A salvação do povo seja a suprema lei (Cícero, De Legibus)", "detalhes": "Fruto de intensa luta social entre patrícios e plebeus, uma comissão de dez magistrados (decênviros) viajou para estudar leis gregas e redigiu doze tábuas afixadas no Fórum Romano. Consolidaram normas de direito processual civil (in ius vocatio), direito de família (pátrio poder), tutela e herança, direito de propriedade, vizinhança e delitos (talionalismo limitado e composição pecuniária).", "impacto": "Marco fundador do direito romano laico e escrito. A lei tornou-se pública, cognoscível e vinculante para toda a coletividade.", "pilares": ["Publicidade e transparência da lei escrita", "Fixação do rito processual formal", "Gênese da distinção entre direito público e privado"]}, {"id": "pretor-peregrino", "ano": "367 a.C. / 242 a.C.", "ordem": -242, "titulo": "O Direito Pretoriano e a Criação do Pretor Peregrino", "era": "Antiguidade Clássica", "era_slug": "antiguidade", "tradicao": "Direito Romano / Ius Honorarium", "tradicao_tipo": "civil-law", "local": "Roma Antiga", "destaque": false, "imagem": "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=80", "resumo": "Nascimento do Ius Honorarium e do Ius Gentium: o pretor flexibilizou o arcaico e rígido Ius Civile com base na equidade e na boa-fé comercial.", "citacao": "«Ius praetorium est quod praetores introduxerunt adiuvandi vel supplendi vel corrigendi iuris civilis gratia propter utilitatem publicam.» — Papiniano (Digesto 1.1.7.1)", "detalhes": "Com a expansão do comércio de Roma no Mar Mediterrâneo, os cidadãos estrangeiros (peregrinos) não podiam ser julgados pelas fórmulas arcaicas do Ius Civile exclusivo dos patrícios. O Pretor Urbano (367 a.C.) e o Pretor Peregrino (242 a.C.) passaram a emitir editos anuais com ações processuais novas, tutelando a boa-fé objetiva (bona fides), o dolo, o consentimento e os costumes mercantis universais (Ius Gentium).", "impacto": "Criou o dinamismo e a adaptabilidade que transformaram o direito romano no sistema jurídico mais sofisticado da Antiguidade.", "pilares": ["Ius Honorarium (direito pretoriano como correção e suprimento da lei)", "Ius Gentium (direito universal fundamentado na razão humana comum)", "Entronização da boa-fé objetiva e da equidade mercantil"]}, {"id": "jurisprudencia-classica", "ano": "sécs. I a.C. – III d.C.", "ordem": 100, "titulo": "A Jurisprudência Clássica Romana", "era": "Antiguidade Clássica", "era_slug": "antiguidade", "tradicao": "Direito Romano / Doutrina", "tradicao_tipo": "civil-law", "local": "Roma Imperial", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ulpian_-_Fresco_in_Palazzo_di_Giustizia_Rome.jpg/640px-Ulpian_-_Fresco_in_Palazzo_di_Giustizia_Rome.jpg", "resumo": "A era dourada dos grandes jurisconsultos (Papiniano, Ulpiano, Paulo, Gaio e Modestino), arquitetando as categorias dogmáticas do Direito Civil.", "citacao": "«Iustitia est constans et perpetua voluntas ius suum cuique tribuendi.» — Ulpiano (A justiça é a vontade constante e perpétua de dar a cada um o que é seu)", "detalhes": "Os juristas romanos não eram teóricos isolados, mas consultores de elite agraciados com o 'ius respondendi ex auctoritate principis' (o privilégio imperial de emitir pareceres com força de lei). Eles construíram os conceitos de propriedade, posse, obrigações contratuais e delituais, servidões, usufruto, dolo, culpa, nulidades e presunções jurídicas. Em 426 d.C., a célebre Lei das Citações consagrou formalmente a autoridade do 'Tribunal dos Mortos' (Papiniano, Ulpiano, Paulo, Gaio e Modestino).", "impacto": "Legou ao mundo a espinha dorsal técnica, conceitual e taxonômica de todo o Direito Privado ocidental.", "pilares": ["Tripartição fundamental de Gaio: Pessoas, Coisas e Ações", "Doutrina das Obrigações e Teoria das Nulidades", "Três preceitos de Ulpiano: viver honestamente, não lesar ninguém e dar a cada um o que é seu"]}, {"id": "corpus-iuris-civilis", "ano": "529–534 d.C.", "ordem": 533, "titulo": "O Corpus Iuris Civilis de Justiniano", "era": "Antiguidade Clássica", "era_slug": "antiguidade", "tradicao": "Direito Romano / Matriz Civil Law", "tradicao_tipo": "civil-law", "local": "Constantinopla, Império Bizantino", "destaque": true, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Meister_von_San_Vitale_in_Ravenna.jpg/800px-Meister_von_San_Vitale_in_Ravenna.jpg", "resumo": "O maior monumento codificador da Antiguidade, preservando um milênio de sabedoria jurídica romana em quatro obras imortais dirigidas por Triboniano.", "citacao": "«Iuris praecepta sunt haec: honeste vivere, alterum non laedere, suum cuique tribuere.» — Institutas de Justiniano (1.1.3)", "detalhes": "Determinada pelo imperador bizantino Justiniano I, a compilação resgatou e harmonizou séculos de constituições imperiais e literatura doutrinária. Estruturada em quatro partes: 1) Codex (constituições imperiais desde Adriano); 2) Digesto ou Pandectas (533 d.C. - 50 livros com mais de 9.000 fragmentos dos grandes juristas clássicos); 3) Institutas (manual de ensino para estudantes); 4) Novelas (leis promulgadas após 534 d.C.).", "impacto": "Constitui a viga-mestra de toda a tradição da Civil Law. Sua redescoberta no século XI deflagrou o renascimento universitário e deu origem ao Ius Commune.", "pilares": ["Codex (legislação imperial consolidada)", "Digesto/Pandectas (compilação monumental da jurisprudência clássica)", "Institutas e Novelas (pedagogia jurídica e atualização legislativa)"]}, {"id": "direito-germanico", "ano": "séc. V–VI d.C.", "ordem": 550, "titulo": "Direito Germânico Primitivo e Personalidade das Leis", "era": "Idade Média", "era_slug": "media", "tradicao": "Tradição Germânica", "tradicao_tipo": "civil-law", "local": "Europa Ocidental", "destaque": false, "imagem": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80", "resumo": "Com a queda de Roma, vigorou o direito oral consuetudinário tribal germânico: indenização tarifada (Wergeld), juradores solenes e ordálios divinos.", "citacao": "«Si quis hominem ingenuum occiderit... compositio solvatur.» — Cláusula típica da Lei Sálica", "detalhes": "Após 476 d.C., os povos invasores (francos, visigodos, lombardos) trouxeram sua concepção de direito comunitário. Adotou-se o Princípio da Personalidade das Leis: o indivíduo era julgado pela lei da sua estirpe de nascimento, e não pelo território onde estava. A autotutela foi domesticada mediante o Wergeld (preço da vida humana tarifado em moeda/gado para estancar vinganças), juramentos com conjuratores e a invocação dos juízos de Deus (ordálios pelo ferro ou pela água).", "impacto": "Injetou o costume popular descentralizado e os conceitos de posse corpórea (Gewere) que se mesclariam ao formalismo romano.", "pilares": ["Princípio da Personalidade das Leis", "Wergeld (compensação pecuniária tarifada)", "Ordálios e prova por conjuração"]}, {"id": "liber-iudiciorum", "ano": "654 d.C.", "ordem": 654, "titulo": "Liber Iudiciorum (Código Visigótico)", "era": "Idade Média", "era_slug": "media", "tradicao": "Romano-Germânica / Ibérica", "tradicao_tipo": "civil-law", "local": "Toledo, Reino Visigótico (Hispânia)", "destaque": false, "imagem": "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=800&q=80", "resumo": "Promulgado pelo rei Recesvinto, unificou a legislação aplicável a hispano-romanos e visigodos, superando a personalidade das leis em prol da territorialidade.", "citacao": "«A lei é a emulação da divindade, o freio da maldade e a mestra da inocência.» — Prólogo do Liber Iudiciorum", "detalhes": "Conhecido mais tarde como 'Fuero Juzgo', o Liber Iudiciorum representou uma das mais refinadas sínteses entre o direito romano vulgarizado e o direito consuetudinário visigótico. Teve grande influência da Igreja através dos Concílios de Toledo. O código aboliu formalmente a distinção entre a população conquistada (romana) e os governantes visigodos, estabelecendo um direito territorial unificado.", "impacto": "Documento fundador do direito peninsular hispânico e lusitano, permanecendo como fonte subsidiária em Portugal e Espanha até a Idade Moderna.", "pilares": ["Superação do princípio da personalidade em favor da territorialidade", "Fusão do direito romano vulgar com institutos germânicos", "Influência dos Concílios Eclesiásticos de Toledo"]}, {"id": "conquista-normanda", "ano": "1066", "ordem": 1066, "titulo": "A Conquista Normanda e a Gênese da Common Law", "era": "Idade Média", "era_slug": "media", "tradicao": "Common Law", "tradicao_tipo": "common-law", "local": "Inglaterra", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Bayeux_Tapestry_scene57_Harold_death.jpg/800px-Bayeux_Tapestry_scene57_Harold_death.jpg", "resumo": "Guilherme, o Conquistador vence a Batalha de Hastings e centraliza o poder real na Inglaterra, instituindo as cortes de Westminster e a Curia Regis.", "citacao": "«Rex tenet terram suam de nullo nisi de Deo.» — Princípio feudal da soberania régia normanda", "detalhes": "Após derrotar Haroldo II em Hastings, Guilherme I implementou uma administração centralizada sem precedentes na Europa feudal. Criou o Domesday Book (1086), minucioso censo fiscal e patrimonial de toda a ilha, e estabeleceu a Curia Regis (Conselho Real). Ao invés de adotar os direitos senhoriais fragmentados, os monarcas normandos começaram a enviar juízes do rei para aplicar um 'costume geral do reino' (Common Law).", "impacto": "Ponto de bifurcação histórica da tradição anglo-saxônica, afastando a Inglaterra do modelo universitário-codificado que nasceria na Europa continental.", "pilares": ["Unificação política e fiscal do reino", "Criação da Curia Regis e cortes centrais em Westminster", "Embrião da jurisdição régia sobreposta às cortes senhoriais"]}, {"id": "bolonha-glosadores", "ano": "c. 1088", "ordem": 1088, "titulo": "O Renascimento de Bolonha e os Glosadores", "era": "Idade Média", "era_slug": "media", "tradicao": "Ius Commune / Civil Law", "tradicao_tipo": "civil-law", "local": "Bolonha, Itália", "destaque": true, "imagem": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80", "resumo": "Redescoberta do manuscrito integral do Digesto (Littera Pisana/Florentina). Fundação da Universidade de Bolonha por Irnério e início do estudo científico do direito.", "citacao": "«Quod non capit Christus, capit fiscus.» — Máxima jurídica reelaborada nas cátedras bolonhesas", "detalhes": "O reaparecimento do Digesto de Justiniano na Itália setentrional revolucionou a cultura europeia. Em Bolonha, Irnério e seus discípulos (os quatro doutores: Búlgaro, Martinho, Hugo e Jacopo) inauguraram o método analítico das glosas: notas explicativas interlineares e marginais que decifravam o texto latino original. Essa era atingiu o ápice com a Glosa Magna de Acursio (c. 1250), que compilou cerca de 96.000 notas doutrinárias.", "impacto": "Deu à luz as Faculdades de Direito e à figura do jurista profissional, erigindo o Direito Romano justinianeu na base comum do pensamento jurídico continental.", "pilares": ["Fundação da Universidade de Bolonha (Alma Mater Studiorum)", "Método das Glosas e exegese do Digesto", "Glosa Magna de Acursio (sistematização de 96.000 anotações)"]}, {"id": "decreto-graciano", "ano": "c. 1140", "ordem": 1140, "titulo": "O Decreto de Graciano e o Direito Canônico", "era": "Idade Média", "era_slug": "media", "tradicao": "Direito Canônico", "tradicao_tipo": "internacional", "local": "Bolonha / Roma, Igreja Católica", "destaque": false, "imagem": "https://images.unsplash.com/photo-1548625361-195fe5789647?auto=format&fit=crop&w=800&q=80", "resumo": "A 'Concordia Discordantium Canonum': monge Graciano harmoniza pelo método dialético mil anos de cânones bíblicos e papais divergentes.", "citacao": "«Humanum genus duobus regitur, naturali videlicet iure et moribus.» — Graciano (O gênero humano é regido por dois princípios: o direito natural e os costumes)", "detalhes": "Graciano utilizou o método escolástico e a distinção dialética para conciliar textos sagrados, decretais pontifícias e cânones de concílios que pareciam contraditórios. Seu trabalho inaugurou a ciência autônoma do Direito Canônico, que culminou no 'Corpus Iuris Canonici' (incorporando as Decretais de Gregório IX de 1234, o Livro Sexto e as Clementinas). A Igreja assumiu jurisdição universal sobre casamento, contratos de boa-fé, testamentos e delitos morais.", "impacto": "Inseriu no direito ocidental os conceitos de consentimento mútuo matrimonial, enriquecimento sem causa, boa-fé e o procedimento inquisitório escrito.", "pilares": ["Harmonização dialética das fontes eclesiásticas", "Desenvolvimento do Direito de Família e Sucessões", "Fundação do Corpus Iuris Canonici"]}, {"id": "henrique-ii-writs", "ano": "1154–1189", "ordem": 1170, "titulo": "As Reformas de Henrique II: Writs e o Júri", "era": "Idade Média", "era_slug": "media", "tradicao": "Common Law", "tradicao_tipo": "common-law", "local": "Inglaterra", "destaque": false, "imagem": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80", "resumo": "Instituição dos juízes itinerantes (eyre), do sistema formal de 'writs' da Chancelaria e consolidação do Tribunal do Júri popular.", "citacao": "«Nenhum homem livre responderá em juízo pelo seu feudo sem uma ordem escrita do rei.» — Princípio do Writ of Right", "detalhes": "Henrique II Plantageneta é o verdadeiro arquiteto operacional da Common Law. Ele expandiu as cortes reais enviando juízes itinerantes por todos os condados da Inglaterra. Para acionar a justiça real, o litigante comprava um 'writ' emitido pela Chancelaria régia (ordem com fórmula estrita ao xerife). Instituiu os 'Assizes' de Clarendon e Northampton, substituindo os arcaicos duelos e ordálios pelo julgamento baseado no testemunho de vizinhos juramentados sob juramento (nascimento do Grand Jury e do Petit Jury).", "impacto": "Consolidou a jurisdição nacional e a regra dos precedentes, fundamentando a soberania da 'lei da terra' aplicada por cidadãos pares.", "pilares": ["Criação do sistema de Writs executivos pré-padronizados", "Consolidação do Tribunal do Júri (julgamento por pares)", "Superação definitiva das justiças senhoriais locais"]}, {"id": "magna-carta", "ano": "1215", "ordem": 1215, "titulo": "A Magna Carta Libertatum", "era": "Idade Média", "era_slug": "media", "tradicao": "Common Law / Constitucionalismo", "tradicao_tipo": "common-law", "local": "Runnymede, Inglaterra", "destaque": true, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Magna_Charta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg/800px-Magna_Charta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg", "resumo": "Assinada pelo Rei João Sem-Terra perante os barões feudais. Pedra angular do Devido Processo Legal (Cláusula 39) e da legalidade tributária (Cláusula 12).", "citacao": "«Nullus liber homo capiatur, vel imprisonetur... nisi per legale judicium parium suorum vel per legem terrae.» — Cláusula 39 da Magna Carta (Nenhum homem livre será preso senão pelo julgamento legal de seus pares ou pela lei da terra)", "detalhes": "Pressionado por barões rebeldes contra tributos abusivos e prisões arbitrárias, João Sem-Terra selou a Magna Carta em Runnymede. Entre seus dispositivos imortais: a Cláusula 39 proibiu privação de liberdade ou propriedade sem o devido processo legal ('due process of law'); a Cláusula 12 determinou que nenhum tributo extraordinário fosse cobrado sem o consentimento do conselho do reino (origem do parlamentarismo e do lema 'no taxation without representation').", "impacto": "Primeira limitação jurídica formal ao poder absolutista da Coroa na história europeia, tornando-se o maior ícone do constitucionalismo liberal universal.", "pilares": ["Cláusula 39: Fundamento histórico do Devido Processo Legal", "Cláusula 12: Princípio da Legalidade Tributária e Freio Régio", "Reconhecimento da primazia da 'Lex Terrae' sobre o arbítrio régio"]}, {"id": "comentadores-ius-commune", "ano": "sécs. XIV–XV", "ordem": 1350, "titulo": "Escola dos Comentadores e a Consolidação do Ius Commune", "era": "Idade Média", "era_slug": "media", "tradicao": "Ius Commune / Civil Law", "tradicao_tipo": "civil-law", "local": "Itália e Europa Continental", "destaque": false, "imagem": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80", "resumo": "Bártolo de Sassoferrato e Baldo de Ubaldis adaptam o Direito Romano à realidade comercial, municipal e feudal, erigindo o Ius Commune europeu.", "citacao": "«Nemo jurista nisi bartolista» — Ninguém é jurista se não for seguidor de Bártolo", "detalhes": "Diferente dos glosadores que se atinham à literalidade dos textos romanos antigos, a Escola dos Comentadores (pós-glosadores) formulou soluções pragmáticas para os problemas contemporâneos das cidades-estados italianas e do comércio mercantil. Bártolo de Sassoferrato inventou as bases do Direito Internacional Privado moderno (teoria dos estatutos e conflito de leis no espaço). A fusão do Direito Romano justinianeu reinterpretado com o Direito Canônico formou o 'Ius Commune', patrimônio jurídico compartilhado por todo o continente.", "impacto": "Criou a linguagem jurídica universal que serviu de direito subsidiário em todas as cortes da Europa continental até as codificações do século XIX.", "pilares": ["Pragmatismo forense (Mos Italicus)", "Criação do Direito Internacional Privado por Bártolo", "Consolidação do Ius Commune como direito supletivo comum"]}, {"id": "humanismo-mos-gallicus", "ano": "séc. XVI", "ordem": 1530, "titulo": "O Humanismo Jurídico e a Cisão Mos Gallicus vs. Mos Italicus", "era": "Idade Moderna", "era_slug": "moderna", "tradicao": "Humanismo Renascentista", "tradicao_tipo": "civil-law", "local": "França e Itália", "destaque": false, "imagem": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80", "resumo": "Crítica renascentista aos métodos medievais: juristas como Budé, Alciato e Cujas defendem o estudo filológico, histórico e crítico do Direito Romano original.", "citacao": "«Retornar às fontes puras da Antiguidade, expurgando as adulterações dos séculos medievais.» — Lema dos juristas humanistas", "detalhes": "O Renascimento cultural impôs uma cisão profunda no pensamento jurídico europeu: o 'Mos Gallicus Iura Docendi' (método francês, histórico e filológico) confrontou o tradicional 'Mos Italicus' (método italiano, pragmático e forense). Juristas como Jacques Cujas e Andrea Alciato demonstraram que o texto romano de Justiniano continha interpolações e anacronismos, tratando o direito romano não mais como verdade sagrada imutável, mas como um produto histórico contextualizado.", "impacto": "Abriu as portas para a desmistificação do direito imperial e preparou a mente europeia para construir sistemas jurídicos laicos e nacionais.", "pilares": ["Mos Gallicus (crítica filológica e histórica às fontes clássicas)", "Mos Italicus (resistência prática forense nas cortes e chancelarias)", "Desaceleração da autoridade dogmática absoluta do Digesto"]}, {"id": "bodin-soberania", "ano": "1576", "ordem": 1576, "titulo": "A Teoria da Soberania de Jean Bodin", "era": "Idade Moderna", "era_slug": "moderna", "tradicao": "Direito Público Moderno", "tradicao_tipo": "filosofia", "local": "Paris, França", "destaque": false, "imagem": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80", "resumo": "Jean Bodin publica 'Os Seis Livros da República': define soberania como o poder perpétuo, absoluto e indivisível de legislar sem consentimento alheio.", "citacao": "«A soberania é o poder absoluto e perpétuo de uma República.» — Jean Bodin, Les Six Livres de la République", "detalhes": "Em meio às sangrentas guerras religiosas na França, Jean Bodin formulou o conceito que se tornou a chave do Estado Moderno. Para ele, a principal marca da soberania régia reside na faculdade de dar leis a todos em geral e a cada um em particular, sem a necessidade do consentimento de superiores (Papa, Imperador) ou de inferiores (feudos, estados gerais). Embora sujeito às leis divinas e naturais, o soberano é a fonte exclusiva da lei positiva.", "impacto": "Fundamentou a centralização monárquica e a supremacia da lei régia positivada sobre os costumes dispersos do feudalismo medieval.", "pilares": ["Soberania perpétua, incondicional e indivisível", "Primazia do ato legislativo régio sobre o costume consuetudinário", "Arquitetura teórica do Estado-Nação absolutista"]}, {"id": "ordenacoes-lusitanas", "ano": "1446–1603", "ordem": 1603, "titulo": "As Grandes Compilações Régias: Ordenações Filipinas", "era": "Idade Moderna", "era_slug": "moderna", "tradicao": "Direito Luso-Brasileiro", "tradicao_tipo": "civil-law", "local": "Portugal / Império Ultramarino", "destaque": false, "imagem": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80", "resumo": "Série de códigos do Reino de Portugal: Ordenações Afonsinas (1446), Manuelinas (1521) e Filipinas (1603), consolidando o direito régio e subsidiário.", "citacao": "«Livro V das Ordenações Filipinas: o rigor penal e a tutela da ordem do Reino.»", "detalhes": "Portugal foi pioneiro na unificação legislativa da Europa ocidental. As Ordenações Filipinas (1603), promulgadas por Filipe II durante a União Ibérica, dividiam-se em cinco livros temáticos (processo civil, igreja, pessoas, direito civil privado e direito penal no célebre Livro V). Fixaram a ordem estrita de julgamento: lei régia em primeiro lugar, seguida pelo costume do reino, pelo direito romano justinianeu e pelo direito canônico.", "impacto": "Vigoraram em Portugal e no Brasil por mais de três séculos, sendo a base do direito civil brasileiro até o Código Civil de 1916 e penal até o Código Criminal de 1830.", "pilares": ["Consolidação temática em 5 livros estruturados", "Hierarquia das fontes com primazia régia e Ius Commune subsidiário", "Matriz histórica do ordenamento jurídico luso-brasileiro"]}, {"id": "hugo-grocio", "ano": "1625", "ordem": 1625, "titulo": "De Jure Belli ac Pacis de Hugo Grócio", "era": "Idade Moderna", "era_slug": "moderna", "tradicao": "Jusnaturalismo / Direito Internacional", "tradicao_tipo": "internacional", "local": "República Holandesa / Paris", "destaque": true, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Hugo_Grotius_by_Michiel_Jansz_van_Mierevelt.jpg/640px-Hugo_Grotius_by_Michiel_Jansz_van_Mierevelt.jpg", "resumo": "A laicização do Direito Natural racionalista e a fundação do Direito Internacional Moderno: a lei natural subsistiria 'mesmo que Deus não existisse'.", "citacao": "«Etiamsi daremus non esse Deum aut non curari ab eo negotia humana...» — Hugo Grócio (O direito natural existiria ainda que admitíssemos que Deus não existe)", "detalhes": "Hugo Grócio (Huigh de Groot) publicou sua obra-prima 'Do Direito da Guerra e da Paz' no contexto devastador da Guerra dos Trinta Anos. Sua ruptura epistemológica foi monumental: desvinculou o Direito Natural da teologia escolástica medieval, ancorando-o na reta razão inerente à natureza social do ser humano ('appetitus societatis'). Estabeleceu princípios universais sobre guerra justa, liberdade dos mares (Mare Liberum) e fidelidade aos pactos (pacta sunt servanda).", "impacto": "Pai fundador do Direito Internacional Público moderno e arquiteto da matriz racionalista laica que inspirou o Iluminismo.", "pilares": ["Laicização definitiva do Direito Natural (axioma da razão)", "Regulamentação humanitária da guerra e soberania marítima", "Fundamento do Direito das Gentes entre nações soberanas"]}, {"id": "paz-vestfalia", "ano": "1648", "ordem": 1648, "titulo": "A Paz de Vestfália e o Sistema Internacional de Estados", "era": "Idade Moderna", "era_slug": "moderna", "tradicao": "Direito Internacional Público", "tradicao_tipo": "internacional", "local": "Münster e Osnabrück, Alemanha", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/The_Peace_of_M%C3%BCnster_by_Gerard_ter_Borch.jpg/800px-The_Peace_of_M%C3%BCnster_by_Gerard_ter_Borch.jpg", "resumo": "Fim da Guerra dos Trinta Anos. Estabeleceu o princípio da soberania territorial dos Estados-Nações, a não ingerência em assuntos internos e a igualdade jurídica internacional.", "citacao": "«Cuius regio, eius religio» — A cada reino, a sua religião (Reconhecimento da autodeterminação territorial)", "detalhes": "Os Tratados de Münster e Osnabrück liquidaram o sonho medieval de um império cristão unificado sob a autoridade do Papa ou do Sacro Imperador Romano-Germânico. Em seu lugar, consagrou-se uma ordem internacional de Estados juridicamente iguais e territoriais, dotados de jurisdição interna exclusiva e imunes à intervenção armada estrangeira por motivos religiosos ou dinásticos.", "impacto": "Modelo originário do Direito Internacional Westfaliano que rege a Organização das Nações Unidas até a contemporaneidade.", "pilares": ["Soberania estatal exclusiva sobre o território", "Princípio da não-intervenção nos assuntos domésticos", "Igualdade formal entre nações independentemente de sua força militar"]}, {"id": "colbert-ordenacoes", "ano": "1667–1681", "ordem": 1675, "titulo": "As Grandes Ordenações de Colbert", "era": "Idade Moderna", "era_slug": "moderna", "tradicao": "Direito Real Francês", "tradicao_tipo": "civil-law", "local": "França (Reinado de Luís XIV)", "destaque": false, "imagem": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80", "resumo": "Jean-Baptiste Colbert e Luís XIV promulgam ordenações setoriais unificadas: Processo Civil (1667), Processo Penal (1670), Comércio (1673) e Marinha (1681).", "citacao": "«Ordonnance sur le commerce (Code Marchand): a unificação mercantil do Estado absolutista.»", "detalhes": "Sob a égide do Rei Sol, a monarquia francesa operou a primeira grande consolidação sistemática de ramos jurídicos inteiros. O 'Code Louis' (Processo Civil de 1667) padronizou os trâmites dos tribunais parisienses e provinciais; o 'Code Marchand' (1673), redigido com o auxílio do comerciante Jacques Savary, converteu os costumes corporativos da Lex Mercatoria em lei pública e positiva do Estado.", "impacto": "Antecedente técnico imediato das grandes codificações da Era Napoleônica no século seguinte.", "pilares": ["Separação dos ramos do direito em diplomas autônomos", "Estatização da Lex Mercatoria e do direito marítimo", "Rigor procedimental civil e penal sob controle da Coroa"]}, {"id": "bill-of-rights", "ano": "1689", "ordem": 1689, "titulo": "A Declaração de Direitos (Bill of Rights)", "era": "Idade Moderna", "era_slug": "moderna", "tradicao": "Common Law / Constitucionalismo", "tradicao_tipo": "common-law", "local": "Westminster, Inglaterra", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/English_Bill_of_Rights_of_1689.jpg/640px-English_Bill_of_Rights_of_1689.jpg", "resumo": "Vitória da Revolução Gloriosa: consagração da Monarquia Parlamentar inglesa, fim da suspensão arbitrária de leis e proibição de fianças ou castigos cruéis.", "citacao": "«That the pretended power of suspending the laws or the execution of laws by regal authority without consent of Parliament is illegal.» — Bill of Rights de 1689", "detalhes": "Imposta a Guilherme de Orange e Maria Stuart como condição para assumirem o trono, a Declaração de Direitos submeteu a autoridade régia à supremacia do Parlamento. Estabeleceu eleições parlamentares livres, imunidade parlamentar pela palavra (speech freedom), direito de petição ao monarca e vedação categórica a fianças exorbitantes ou castigos cruéis e degradantes ('cruel and unusual punishments').", "impacto": "Modelo de separação de poderes parlamentar que inspirou a Constituição dos EUA de 1787 e o constitucionalismo ocidental moderno.", "pilares": ["Supremacia da legislação parlamentar sobre o arbítrio da Coroa", "Direito a julgamentos regulares com jurados imparciais", "Proibição expressa de punições cruéis e desproporcionais"]}, {"id": "contratualismo-jusnaturalismo", "ano": "séc. XVII–XVIII", "ordem": 1700, "titulo": "O Contratualismo e a Sistematização Racionalista", "era": "Idade Moderna", "era_slug": "moderna", "tradicao": "Filosofia Política e Jurídica", "tradicao_tipo": "filosofia", "local": "Inglaterra, Alemanha e França", "destaque": false, "imagem": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80", "resumo": "Hobbes, Locke e Rousseau fundam a legitimidade do Estado no pacto social. Pufendorf, Thomasius e Wolff deduzem geometricamente sistemas jurídicos a partir da razão.", "citacao": "«O fim supremo dos homens ao se unirem em comunidades é a preservação de sua propriedade, vida e liberdade.» — John Locke, Segundo Tratado", "detalhes": "A escola jusnaturalista moderna rompeu definitivamente com a ordem teleológica eclesiástica. Para Thomas Hobbes (Leviatã, 1651), o contrato social funda a ordem contra o caos; para John Locke (1689), o Estado existe para salvaguardar direitos inatos inalienáveis (vida, liberdade e propriedade). Na Alemanha, Samuel von Pufendorf e Christian Wolff aplicaram o método 'more geometrico', deduzindo milhares de regras civis e contratuais a partir de axiomas fundamentais da razão.", "impacto": "Forneceu o arcabouço lógico e moral para a teoria dos direitos subjetivos, servindo de matriz aos projetos de codificação do século XIX.", "pilares": ["Contrato Social como fonte de legitimação política", "Doutrina dos Direitos Naturais Inalienáveis de Locke", "Método dedutivo sistemático (axiomas racionais aplicados ao direito civil)"]}, {"id": "montesquieu", "ano": "1748", "ordem": 1748, "titulo": "O Espírito das Leis de Montesquieu", "era": "Revoluções e Codificações", "era_slug": "revolucoes", "tradicao": "Iluminismo / Constitucionalismo", "tradicao_tipo": "filosofia", "local": "Genebra / França", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Montesquieu_1.png/640px-Montesquieu_1.png", "resumo": "Sistematização da Teoria da Separação dos Poderes (Executivo, Legislativo e Judiciário) como freio indispensável contra a tirania.", "citacao": "«Para que não se possa abusar do poder, é preciso que o poder freie o poder.» — Montesquieu, De l'Esprit des Lois", "detalhes": "Charles-Louis de Secondat, Barão de Montesquieu, analisou a natureza e o princípio dos governos. Ao examinar a constituição inglesa, deduziu que a liberdade política só existe quando não há confusão de funções: 'Quando na mesma pessoa ou no mesmo corpo de magistratura o poder legislativo está reunido ao executivo, não há liberdade'. Os juízes, em sua visão iluminista inicial, deveriam ser 'apenas a boca que pronuncia as palavras da lei'.", "impacto": "Princípio basilar obrigatório de quase todas as constituições democráticas do mundo moderno.", "pilares": ["Teoria dos Freios e Contrapesos (Checks and Balances)", "Tripartição funcional do poder estatal", "Garantia institucional da liberdade individual"]}, {"id": "beccaria", "ano": "1764", "ordem": 1764, "titulo": "Dos Delitos e das Penas (Cesare Beccaria)", "era": "Revoluções e Codificações", "era_slug": "revolucoes", "tradicao": "Iluminismo Penal", "tradicao_tipo": "filosofia", "local": "Milão / Livorno, Itália", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Cesare_Beccaria_1738-1794.jpg/640px-Cesare_Beccaria_1738-1794.jpg", "resumo": "A revolução humanista do Direito Penal: legalidade estrita, proporcionalidade entre delito e pena, fim da tortura e supressão da pena de morte.", "citacao": "«Nullum crimen, nulla poena sine praevia lege poenali.» — Princípio da Legalidade Penal consagrado por Beccaria", "detalhes": "Publicado anonimamente em Livorno para fugir da censura eclesiástica e absolutista, o pequeno tratado do jovem nobre milanês Cesare Beccaria demoliu o sistema penal do Antigo Regime. Beccaria atacou a tortura inquisitória como crueldade inútil que premia os fortes e condena os fracos. Sustentou que a certeza da punição, e não a sua atrocidade espetacular, é o que dissuade os crimes.", "impacto": "Matriz fundadora do Direito Penal garantista contemporâneo, influenciando Catarina da Rússia, Voltaire e a Declaração de 1789.", "pilares": ["Princípio da Legalidade Estrita e Proibição de Analogia Penal", "Proporcionalidade matemática entre dano social e sanção", "Abolição irrevogável da tortura e secularização do delito"]}, {"id": "declaracao-1789", "ano": "1789", "ordem": 1789, "titulo": "Declaração dos Direitos do Homem e do Cidadão", "era": "Revoluções e Codificações", "era_slug": "revolucoes", "tradicao": "Direitos Fundamentais / Constitucionalismo", "tradicao_tipo": "filosofia", "local": "Paris, França Revolucionária", "destaque": true, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Declaration_of_the_Rights_of_Man_and_of_the_Citizen_in_1789.jpg/800px-Declaration_of_the_Rights_of_Man_and_of_the_Citizen_in_1789.jpg", "resumo": "A Assembleia Nacional Constituinte proclama que os homens nascem livres e iguais em direitos, consagrando a propriedade, a liberdade e a soberania da lei.", "citacao": "«Os homens nascem e são livres e iguais em direitos. As distinções sociais só podem fundar-se na utilidade comum.» — Artigo 1º da Declaração de 1789", "detalhes": "Com a queda da Bastilha e a abolição dos privilégios feudais na noite de 4 de agosto, a França revolucionária redigiu um manifesto universalista. A Declaração estabeleceu a presunção de inocência (Art. 9º), a liberdade de expressão e consciência religiosa, a sacralidade da propriedade privada (Art. 17º) e a definição da lei como a 'expressão da vontade geral' (Rousseau), perante a qual todos são rigorosamente iguais.", "impacto": "Texto matricial dos Direitos Humanos universais, inspirando todas as declarações constitucionais do mundo contemporâneo.", "pilares": ["Igualdade formal universal perante a lei", "Presunção de inocência e garantias penais individuais", "Soberania nacional emanada do povo e não do direito divino"]}, {"id": "codigo-napoleonico", "ano": "1804", "ordem": 1804, "titulo": "O Código Napoleônico (Code Civil des Français)", "era": "Revoluções e Codificações", "era_slug": "revolucoes", "tradicao": "Codificação / Civil Law", "tradicao_tipo": "civil-law", "local": "Paris, França", "destaque": true, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/800px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg", "resumo": "O maior monumento codificador moderno: unificou o direito francês em 2.281 artigos, sepultando o pluralismo feudal e servindo de modelo mundial.", "citacao": "«Minha verdadeira glória não é ter vencido quarenta batalhas... O que viverá eternamente é o meu Código Civil.» — Napoleão Bonaparte em Santa Helena", "detalhes": "Promulgado em 21 de março de 1804, foi elaborado por uma comissão brilhante de juristas liderada por Jean-Étienne-Marie Portalis. O Código unificou a França que até então era dividida: o sul romano (pays de droit écrit) e o norte consuetudinário franco (pays de droit coutumier). Estruturou-se sobre a propriedade individual plena, a liberdade contratual (autonomia da vontade), o casamento civil laico e a igualdade formal de todos os cidadãos do sexo masculino perante a lei.", "impacto": "Modelo definitivo da Civil Law global: foi exportado por toda a Europa continental, América Latina, Quebec e Luisiana.", "pilares": ["Unificação jurídica total revogando todos os costumes anteriores", "Primado da autonomia privada e da propriedade burguesa", "Clareza estilística e linguagem acessível ao cidadão comum"]}, {"id": "debate-savigny-thibaut", "ano": "1814", "ordem": 1814, "titulo": "O Debate Thibaut x Savigny e a Escola Histórica", "era": "Revoluções e Codificações", "era_slug": "revolucoes", "tradicao": "Doutrina e Teoria Jurídica", "tradicao_tipo": "civil-law", "local": "Heidelberg / Berlim, Alemanha", "destaque": false, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Friedrich_Carl_von_Savigny_1855.jpg/640px-Friedrich_Carl_von_Savigny_1855.jpg", "resumo": "Thibaut propõe um Código Civil unificado alemão; Savigny responde com 'Da Vocação da Nossa Época', sustentando que o direito brota do 'Volksgeist' (espírito do povo).", "citacao": "«O direito se desenvolve com o povo, aperfeiçoa-se com ele e finalmente morre quando o povo perde a sua personalidade.» — Savigny", "detalhes": "Após a derrota de Napoleão, Anton Friedrich Justus Thibaut publicou panfleto defendendo a imediata codificação de um código civil alemão aos moldes franceses para forjar a união política. Friedrich Carl von Savigny refutou veementemente a proposta, fundando a Escola Histórica do Direito: para Savigny, o direito não é fruto da vontade artificial de um legislador iluminado, mas um produto orgânico e histórico da consciência popular (Volksgeist), cuja sistematização compete aos juristas.", "impacto": "Retardou a codificação alemã por quase um século, mas produziu o florescimento da ciência dogmática mais refinada do século XIX: a Pandectística.", "pilares": ["Rejeição à codificação voluntarista apressada", "Doutrina do Volksgeist (espírito orgânico do povo)", "Desenvolvimento da ciência jurídica e historiografia dogmática"]}, {"id": "bgb-alemanha", "ano": "1896 / 1900", "ordem": 1900, "titulo": "O Código Civil Alemão (BGB - Bürgerliches Gesetzbuch)", "era": "Revoluções e Codificações", "era_slug": "revolucoes", "tradicao": "Pandectística / Civil Law", "tradicao_tipo": "civil-law", "local": "Berlim, Império Alemão", "destaque": true, "imagem": "https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=800&q=80", "resumo": "Obra-prima do rigor técnico e da precisão conceitual dos pandectistas (Bernhard Windscheid). Entrou em vigor em 1º de janeiro de 1900 com Parte Geral inovadora.", "citacao": "«O monumento de abstração dogmática que inaugurou o século XX jurídico.»", "detalhes": "Aprovado pelo Reichstag em 1896 e em vigor em 1900, o BGB é o ápice da Pandectística germânica. Ao contrário da linguagem popular e literária do Código Napoleônico, o BGB foi escrito em vocabulário técnico rigorosíssimo, pensado para especialistas. Inaugurou a estrutura com uma 'Parte Geral' contendo os conceitos universais de negócio jurídico, capacidade e prescrição. Teve como principal relator Bernhard Windscheid.", "impacto": "Maior alternativa técnica ao modelo francês, influenciou profundamente os códigos de Suíça, Japão, China, Grécia e o Código Civil Brasileiro de 1916 e 2002.", "pilares": ["Invenção da Parte Geral e da teoria do Negócio Jurídico", "Precisão cirúrgica de conceitos dogmáticos e remissões lógicas", "Cláusulas gerais de boa-fé (Treu und Glauben) e bons costumes"]}, {"id": "nuremberg", "ano": "1945–1946", "ordem": 1945, "titulo": "O Tribunal Militar Internacional de Nuremberg", "era": "Século XX e XXI", "era_slug": "contemporaneo", "tradicao": "Direito Penal Internacional", "tradicao_tipo": "internacional", "local": "Nuremberg, Alemanha", "destaque": true, "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Nuremberg_trials_courtroom.jpg/800px-Nuremberg_trials_courtroom.jpg", "resumo": "Julgamento dos altos escalões nazistas. Ruptura com a imunidade da soberania estatal: líderes respondem pessoalmente por crimes contra a humanidade e de guerra.", "citacao": "«Crimes contra o direito internacional são cometidos por homens, e não por entidades abstratas...» — Julgamento de Nuremberg", "detalhes": "Os Aliados instauraram o Tribunal Militar Internacional no Palácio de Justiça de Nuremberg para julgar os principais criminosos de guerra. O tribunal consagrou que o cumprimento de ordens superiores ('Befehlsnotstand') ou a existência de legislação interna complacente não isentam o indivíduo de responsabilidade perante o direito das gentes. Definiu formalmente os 'Crimes contra a Paz', 'Crimes de Guerra' e 'Crimes contra a Humanidade'.", "impacto": "Pedra fundamental do Direito Penal Internacional contemporâneo e antecedente direto do Tribunal Penal Internacional (TPI / Estatuto de Roma).", "pilares": ["Responsabilidade penal individual de governantes no plano internacional", "Tipificação autônoma dos crimes contra a humanidade", "Inadmissibilidade da escusa de ordens superiores para justificar atrocidades"]}, {"id": "formula-radbruch", "ano": "1946", "ordem": 1946, "titulo": "A Fórmula de Gustav Radbruch", "era": "Século XX e XXI", "era_slug": "contemporaneo", "tradicao": "Filosofia do Direito / Pós-Positivismo", "tradicao_tipo": "filosofia", "local": "Heidelberg, Alemanha", "destaque": false, "imagem": "https://images.unsplash.com/photo-1453733190371-0a9bedd828e1?auto=format&fit=crop&w=800&q=80", "resumo": "Superação do positivismo estrito ('a lei é a lei'): a lei manifestamente injusta que viola a igualdade e a dignidade humana carece de validade jurídica (não-direito).", "citacao": "«Onde a contradição entre a lei positiva e a justiça atinge uma medida tão insuportável, a lei, como 'direito injusto', deve ceder diante da justiça.» — Gustav Radbruch", "detalhes": "Em seu célebre ensaio 'Injustiça Legal e Direito Supralegal' (Gesetzliches Unrecht und übergesetzliches Recht), o filósofo e ministro da justiça alemão Gustav Radbruch diagnosticou como o positivismo acrítico ('Gesetz ist Gesetz') desarmou os juristas perante a barbárie nazista. A Fórmula estabelece que quando a lei positiva atinge um grau de injustiça insuportável, ou nega conscientemente a igualdade essencial, ela perde seu caráter de norma jurídica.", "impacto": "Base teórica para o julgamento dos 'atiradores do muro de Berlim' após a reunificação alemã e motor do pós-positivismo constitucional moderno.", "pilares": ["Distinção entre validade formal e legitimidade axiológica da lei", "Injustiça extrema não gera dever de obediência jurídica", "Fundação do neoconstitucionalismo axiológico e material"]}, {"id": "constitucionalismo-pos-guerra", "ano": "1947–1949", "ordem": 1949, "titulo": "O Constitucionalismo Humanista: Itália e Lei de Bonn", "era": "Século XX e XXI", "era_slug": "contemporaneo", "tradicao": "Direito Constitucional", "tradicao_tipo": "civil-law", "local": "Itália e Alemanha", "destaque": false, "imagem": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80", "resumo": "A Constituição Italiana (1947) e a Lei Fundamental de Bonn (1949) erigem a dignidade humana como cláusula pétrea, resguardada por Tribunais Constitucionais.", "citacao": "«Die Würde des Menschen ist unantastbar.» — A dignidade da pessoa humana é intangível (Art. 1º, Lei Fundamental de Bonn)", "detalhes": "A reconstrução democrática das potências derrotadas erigiu uma blindagem constitucional sem precedentes. O Tribunal Constitucional Federal Alemão (BVerfG) em Karlsruhe e a Corte Constitucional Italiana receberam o monopólio da guarda da constituição e da anulação de leis incompatíveis com direitos fundamentais. Consagrou-se a 'democracia militante', apta a frear partidos e forças que busquem subverter a ordem democrática por vias eleitorais.", "impacto": "Modelo de jurisdição constitucional e proporcionalidade (razoabilidade) exportado para Portugal (1976), Espanha (1978) e Brasil (1988).", "pilares": ["Dignidade humana como princípio supremo inegociável", "Controle concentrado de constitucionalidade com eficácia vinculante", "Doutrina dos limites dos limites aos direitos fundamentais"]}, {"id": "cedh-tedh", "ano": "1950", "ordem": 1950, "titulo": "A Convenção Europeia dos Direitos Humanos (CEDH)", "era": "Século XX e XXI", "era_slug": "contemporaneo", "tradicao": "Direitos Humanos / Internacional", "tradicao_tipo": "internacional", "local": "Roma / Estrasburgo, Conselho da Europa", "destaque": false, "imagem": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80", "resumo": "Criação do Tribunal Europeu dos Direitos Humanos (TEDH) em Estrasburgo, garantindo o direito de petição individual direta dos cidadãos contra seus próprios Estados.", "citacao": "«O indivíduo deixa de ser mero objeto de soberania para se tornar sujeito ativo de direito perante cortes internacionais.»", "detalhes": "Adotada sob o Conselho da Europa, a Convenção instituiu o mecanismo de proteção aos direitos fundamentais mais eficaz da história. O Tribunal de Estrasburgo passou a apreciar queixas formuladas diretamente por cidadãos comuns contra seus governos soberanos por violação do direito à vida, integridade, julgamento justo em prazo razoável e liberdade de expressão.", "impacto": "Transformou a soberania nacional em conceito subordinado ao respeito intransigente aos direitos humanos fundamentais.", "pilares": ["Direito de queixa e ação individual direta perante corte internacional", "Jurisprudência vinculante do Tribunal de Estrasburgo (TEDH)", "Padronização protetiva comum por toda a Europa"]}, {"id": "tratados-paris-roma", "ano": "1951 / 1957", "ordem": 1957, "titulo": "Os Tratados de Paris (CECA) e Roma (CEE)", "era": "Século XX e XXI", "era_slug": "contemporaneo", "tradicao": "Direito Comunitário / Integração", "tradicao_tipo": "internacional", "local": "Paris e Roma, Europa Ocidental", "destaque": false, "imagem": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80", "resumo": "Nascimento da integração comunitária europeia: a Declaração Schuman, a Comunidade do Carvão e Aço e o Mercado Comum Europeu para banir a guerra.", "citacao": "«A Europa não se fará de uma só vez, nem numa construção de conjunto: far-se-á por meio de realizações concretas que criem uma solidariedade de fato.» — Robert Schuman", "detalhes": "Idealizado por Jean Monnet e Robert Schuman, o projeto europeu amarrou a produção siderúrgica e energética de França e Alemanha, tornando a guerra entre eles materialmente impossível. O Tratado de Roma (1957) expandiu o bloco para a Comunidade Econômica Europeia (CEE), consagrando as quatro liberdades fundamentais do mercado: livre circulação de mercadorias, pessoas, serviços e capitais.", "impacto": "Embrião de uma nova ordem política e jurídica supranacional que evoluiria para a União Europeia.", "pilares": ["Solidariedade econômica como vacina contra guerras", "Quatro liberdades de circulação comunitária", "Transferência parcial de parcelas de soberania estatal"]}, {"id": "tjue-primazia-efeito-direto", "ano": "1963–1964", "ordem": 1963, "titulo": "Revolução Jurisprudencial do TJUE: Primazia e Efeito Direto", "era": "Século XX e XXI", "era_slug": "contemporaneo", "tradicao": "Direito da União Europeia", "tradicao_tipo": "internacional", "local": "Luxemburgo, Tribunal de Justiça da UE", "destaque": true, "imagem": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80", "resumo": "Acórdãos históricos Van Gend en Loos (1963) e Costa v. ENEL (1964): o direito comunitário gera efeitos imediatos para cidadãos e prevalece sobre leis nacionais.", "citacao": "«A Comunidade constitui uma ordem jurídica nova de direito internacional, a favor da qual os Estados limitaram os seus direitos de soberania...» — TJUE, Caso Van Gend en Loos", "detalhes": "Em decisões arrojadas, o Tribunal de Justiça da União Europeia (TJUE) em Luxemburgo construiu pretorianamente a natureza constitucional dos tratados. No acórdão Van Gend en Loos (1963), consagrou o 'Efeito Direto': normas europeias conferem direitos subjetivos que indivíduos podem exigir diretamente perante juízes de seus países. No acórdão Costa v. ENEL (1964), fixou a 'Primazia do Direito Europeu': o direito comunitário sobrepõe-se a qualquer norma interna posterior contrária, inclusive constitucional.", "impacto": "Transformou a Comunidade Econômica em uma união constitucional integrada dotada de eficácia coercitiva inédita no planeta.", "pilares": ["Princípio do Efeito Direto (invocabilidade imediata pelo cidadão)", "Princípio da Primazia (supremacia do direito da UE sobre o direito doméstico)", "Reenvio Prejudicial como diálogo judiciário cooperativo"]}, {"id": "maastricht-lisboa", "ano": "1992 / 2007", "ordem": 1992, "titulo": "Os Tratados de Maastricht e Lisboa", "era": "Século XX e XXI", "era_slug": "contemporaneo", "tradicao": "Direito da União Europeia", "tradicao_tipo": "internacional", "local": "Maastricht / Lisboa, União Europeia", "destaque": false, "imagem": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80", "resumo": "Maastricht institui a União Europeia, a Cidadania Europeia e a moeda única (Euro). Lisboa confere força jurídica cogente à Carta dos Direitos Fundamentais da UE.", "citacao": "«A União assenta nos valores do respeito pela dignidade humana, da liberdade, da democracia, da igualdade e do Estado de direito.» — Artigo 2º do Tratado da União Europeia", "detalhes": "O Tratado de Maastricht (1992) selou a transição da integração econômica para a união política, instituindo a cidadania europeia suplementar. O Tratado de Lisboa (assinado em 2007, vigente em 2009) reformulou a estrutura institucional e outorgou o mesmo valor jurídico vinculante dos tratados à Carta dos Direitos Fundamentais da União Europeia, consagrando proteção abrangente a direitos civis, políticos, sociais e bioéticos.", "impacto": "Consolidação definitiva do maior arranjo institucional supranacional e democrático do planeta.", "pilares": ["Cidadania Comum Europeia e União Econômica e Monetária (Euro)", "Força jurídica plena e cogente à Carta dos Direitos Fundamentais", "Fortalecimento dos poderes do Parlamento Europeu"]}, {"id": "seculo-xxi-vanguarda", "ano": "Século XXI (Atualidade)", "ordem": 2024, "titulo": "A Vanguarda Regulatória Europeia: GDPR e o AI Act", "era": "Século XX e XXI", "era_slug": "contemporaneo", "tradicao": "Direito Digital e Tecnológico", "tradicao_tipo": "civil-law", "local": "Bruxelas / Estrasburgo, União Europeia", "destaque": true, "imagem": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80", "resumo": "O direito europeu lidera a governança global da era digital: o 'Efeito Bruxelas' molda os padrões mundiais com a proteção de dados (GDPR) e a regulação de IA (AI Act).", "citacao": "«O direito europeu permanece o mais perene instrumento civilizatório da humanidade em face das novas fronteiras tecnológicas.»", "detalhes": "Na era contemporânea, o direito europeu continua a exercer influência planetária através do denominado 'Efeito Bruxelas' (Brussels Effect). O Regulamento Geral sobre a Proteção de Dados (GDPR / RGPD, 2016/2018) estabeleceu o direito à autodeterminação informativa e inspirou legislações globais como a LGPD brasileira e o CCPA californiano. Mais recentemente, o Regulamento Europeu de Inteligência Artificial (EU AI Act, 2024) inaugurou a primeira moldura jurídica do mundo baseada em riscos para sistemas de IA generativa e autônoma.", "impacto": "Reafirma a tradição civilizatória europeia de subordinar o poder tecnológico e econômico à dignidade inegociável da pessoa humana.", "pilares": ["GDPR: Privacidade e autodeterminação informativa como direito fundamental", "EU AI Act: Classificação de risco sistêmico e proteção contra discriminação algorítmica", "Efeito Bruxelas como poder regulador global da União Europeia"]}];
+
+    let currentEraFilter = 'all';
+    let currentTraditionFilter = 'all';
+    let onlyCrucial = false;
+    let searchQuery = '';
+    let isGridView = false;
+    let currentModalEventId = null;
+
+    // Elementos DOM
+    const eventsContainer = document.getElementById('eventsContainer');
+    const searchInput = document.getElementById('searchInput');
+    const eventCounter = document.getElementById('eventCounter');
+    const viewTimelineBtn = document.getElementById('viewTimelineBtn');
+    const viewGridBtn = document.getElementById('viewGridBtn');
+    const filterCrucialBtn = document.getElementById('filterCrucialBtn');
+    const backToTopBtn = document.getElementById('backToTopBtn');
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    // Modal DOM
+    const eventModal = document.getElementById('eventModal');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
+    const modalImg = document.getElementById('modalImg');
+    const modalYear = document.getElementById('modalYear');
+    const modalTraditionBadge = document.getElementById('modalTraditionBadge');
+    const modalEraBadge = document.getElementById('modalEraBadge');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalLocation = document.getElementById('modalLocation');
+    const modalQuoteContainer = document.getElementById('modalQuoteContainer');
+    const modalQuote = document.getElementById('modalQuote');
+    const modalDetails = document.getElementById('modalDetails');
+    const modalPillars = document.getElementById('modalPillars');
+    const modalImpact = document.getElementById('modalImpact');
+    const modalPrevBtn = document.getElementById('modalPrevBtn');
+    const modalNextBtn = document.getElementById('modalNextBtn');
+    const modalIndexIndicator = document.getElementById('modalIndexIndicator');
+
+    // Função de Filtragem
+    function getFilteredEvents() {
+      return eventsData.filter(event => {
+        // Filtro de Era
+        if (currentEraFilter !== 'all' && event.era_slug !== currentEraFilter) {
+          return false;
+        }
+        // Filtro de Tradição
+        if (currentTraditionFilter !== 'all' && event.tradicao_tipo !== currentTraditionFilter) {
+          return false;
+        }
+        // Apenas Cruciais
+        if (onlyCrucial && !event.destaque) {
+          return false;
+        }
+        // Busca textual
+        if (searchQuery.trim() !== '') {
+          const q = searchQuery.toLowerCase();
+          const matchTitle = event.titulo.toLowerCase().includes(q);
+          const matchYear = event.ano.toLowerCase().includes(q);
+          const matchResumo = event.resumo.toLowerCase().includes(q);
+          const matchDetalhes = event.detalhes.toLowerCase().includes(q);
+          const matchLocal = event.local.toLowerCase().includes(q);
+          const matchTradicao = event.tradicao.toLowerCase().includes(q);
+          const matchCitacao = event.citacao.toLowerCase().includes(q);
+          if (!matchTitle && !matchYear && !matchResumo && !matchDetalhes && !matchLocal && !matchTradicao && !matchCitacao) {
+            return false;
+          }
+        }
+        return true;
+      });
+    }
+
+    // Renderizar eventos na tela
+    function renderEvents() {
+      const filtered = getFilteredEvents();
+      eventCounter.textContent = `Mostrando ${filtered.length} de ${eventsData.length} eventos`;
+
+      if (filtered.length === 0) {
+        eventsContainer.innerHTML = `
+          <div style="text-align: center; padding: 60px 20px; color: var(--text-dim);">
+            <i class="fa-solid fa-magnifying-glass" style="font-size: 3rem; margin-bottom: 16px; opacity: 0.5;"></i>
+            <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--text-main); margin-bottom: 8px;">Nenhum evento encontrado</h3>
+            <p>Tente ajustar os termos de pesquisa ou remover os filtros aplicados.</p>
+          </div>
+        `;
+        return;
+      }
+
+      if (isGridView) {
+        eventsContainer.className = 'grid-view-container';
+        eventsContainer.innerHTML = filtered.map(event => createCardHTML(event, false)).join('');
+      } else {
+        eventsContainer.className = 'timeline-container';
+        eventsContainer.innerHTML = filtered.map((event, index) => {
+          const isLeft = index % 2 === 0;
+          return `
+            <div class="timeline-item ${isLeft ? 'left' : 'right'}">
+              <div class="timeline-node"></div>
+              ${createCardHTML(event, true)}
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    // Construtor de Card individual
+    function createCardHTML(event, isTimeline) {
+      const traditionClass = event.tradicao_tipo;
+      const monumentClass = event.destaque ? 'is-monument' : '';
+
+      return `
+        <div class="event-card ${monumentClass}" onclick="openEventModal('${event.id}')">
+          <div class="card-header-meta">
+            <span class="year-tag">${event.ano}</span>
+            <span class="badge-tradition ${traditionClass}">${event.tradicao}</span>
+            ${event.destaque ? '<span style="color: var(--accent-gold); font-size: 0.75rem; font-weight: 700;"><i class="fa-solid fa-star"></i> Marco Crucial</span>' : ''}
+          </div>
+
+          <div class="card-banner">
+            <img src="${event.imagem}" alt="${event.titulo}" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80';">
+          </div>
+
+          <h3 class="card-title">${event.titulo}</h3>
+          
+          <div class="card-location">
+            <i class="fa-solid fa-location-dot"></i> ${event.local} &bull; ${event.era}
+          </div>
+
+          <p class="card-snippet">${event.resumo}</p>
+
+          <div class="card-action-bar">
+            <span>Ver Detalhes & Impacto</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      `;
+    }
+
+    // Abrir Modal
+    function openEventModal(eventId) {
+      const event = eventsData.find(e => e.id === eventId);
+      if (!event) return;
+
+      currentModalEventId = eventId;
+      const filtered = getFilteredEvents();
+      const currentIndex = filtered.findIndex(e => e.id === eventId);
+
+      modalImg.src = event.imagem;
+      modalYear.textContent = event.ano;
+      modalTraditionBadge.textContent = event.tradicao;
+      modalTraditionBadge.className = `badge-tradition ${event.tradicao_tipo}`;
+      modalEraBadge.textContent = event.era;
+      modalTitle.textContent = event.titulo;
+      modalLocation.textContent = `${event.local} — Era: ${event.era}`;
+
+      if (event.citacao && event.citacao.trim() !== '') {
+        modalQuoteContainer.style.display = 'block';
+        modalQuote.textContent = event.citacao;
+      } else {
+        modalQuoteContainer.style.display = 'none';
+      }
+
+      modalDetails.textContent = event.detalhes;
+      modalImpact.textContent = event.impacto;
+
+      // Pilares
+      modalPillars.innerHTML = event.pilares.map(pilar => `
+        <li>
+          <i class="fa-solid fa-check"></i>
+          <span>${pilar}</span>
+        </li>
+      `).join('');
+
+      // Navegação do modal
+      if (currentIndex !== -1) {
+        modalIndexIndicator.textContent = `${currentIndex + 1} de ${filtered.length}`;
+        modalPrevBtn.disabled = currentIndex === 0;
+        modalNextBtn.disabled = currentIndex === filtered.length - 1;
+      } else {
+        modalIndexIndicator.textContent = ``;
+        modalPrevBtn.disabled = true;
+        modalNextBtn.disabled = true;
+      }
+
+      eventModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Fechar Modal
+    function closeModal() {
+      eventModal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Eventos de Navegação no Modal
+    modalPrevBtn.addEventListener('click', () => {
+      const filtered = getFilteredEvents();
+      const idx = filtered.findIndex(e => e.id === currentModalEventId);
+      if (idx > 0) {
+        openEventModal(filtered[idx - 1].id);
+      }
+    });
+
+    modalNextBtn.addEventListener('click', () => {
+      const filtered = getFilteredEvents();
+      const idx = filtered.findIndex(e => e.id === currentModalEventId);
+      if (idx < filtered.length - 1 && idx !== -1) {
+        openEventModal(filtered[idx + 1].id);
+      }
+    });
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    eventModal.addEventListener('click', (e) => {
+      if (e.target === eventModal) closeModal();
+    });
+
+    // Teclado (Esc para fechar, setas para navegar)
+    document.addEventListener('keydown', (e) => {
+      if (!eventModal.classList.contains('active')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') modalPrevBtn.click();
+      if (e.key === 'ArrowRight') modalNextBtn.click();
+    });
+
+    // Filtros de Era
+    document.querySelectorAll('[data-filter-era]').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('[data-filter-era]').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        currentEraFilter = chip.getAttribute('data-filter-era');
+        renderEvents();
+      });
+    });
+
+    // Filtros de Tradição
+    document.querySelectorAll('[data-filter-tradition]').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('[data-filter-tradition]').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        currentTraditionFilter = chip.getAttribute('data-filter-tradition');
+        renderEvents();
+      });
+    });
+
+    // Filtro Destaque Crucial
+    filterCrucialBtn.addEventListener('click', () => {
+      onlyCrucial = !onlyCrucial;
+      filterCrucialBtn.classList.toggle('active', onlyCrucial);
+      renderEvents();
+    });
+
+    // Barra de Busca
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderEvents();
+    });
+
+    // Modos de Visualização
+    viewTimelineBtn.addEventListener('click', () => {
+      isGridView = false;
+      viewTimelineBtn.classList.add('active');
+      viewGridBtn.classList.remove('active');
+      renderEvents();
+    });
+
+    viewGridBtn.addEventListener('click', () => {
+      isGridView = true;
+      viewGridBtn.classList.add('active');
+      viewTimelineBtn.classList.remove('active');
+      renderEvents();
+    });
+
+    // Botão Voltar ao Topo
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Tema Claro / Escuro
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', newTheme);
+
+      if (newTheme === 'light') {
+        themeIcon.className = 'fa-solid fa-sun';
+        themeLabel.textContent = 'Claro';
+      } else {
+        themeIcon.className = 'fa-solid fa-moon';
+        themeLabel.textContent = 'Escuro';
+      }
+    });
+
+    // Inicialização
+    renderEvents();
+  </script>
+</body>
+</html>
